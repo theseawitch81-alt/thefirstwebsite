@@ -1,0 +1,192 @@
+CSS
+
+
+/* ------------------------------------------- */
+/* 1. ROOT VARIABLES & GLOBAL RESET */
+/* ------------------------------------------- */
+:root {
+    /* ... your colors remain the same ... */
+    --color-primary: #B70909;       
+    --color-secondary: #FFC98A;     
+    --color-background: #F4F0E8;    
+    --color-mystical-aqua: #A8D4D6; 
+    --color-text: #333333;          
+    --color-pearl: #FFFFFF;         
+
+    /* --- UPDATED FONT DEFINITIONS --- */
+    --font-heading: 'Playfair Display', Georgia, serif; 
+    --font-body: 'Lato', Helvetica, sans-serif;
+}
+
+/* Simple Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ------------------------------------------- */
+/* 2. BODY & TYPOGRAPHY */
+/* ------------------------------------------- */
+
+/* Apply the parchment background and general text color */
+body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    /* Optional: Add a subtle paper texture image here */
+    /* background-image: url('images/paper_texture.png'); */
+    line-height: 1.6;
+    padding-top: 80px; /* Space for fixed header */
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--color-text);
+    margin-bottom: 0.5em;
+}
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; color: var(--color-primary); }
+h3 { font-size: 1.5em; color: var(--color-mystical-aqua); }
+
+/* Standard Section Padding */
+section {
+    padding: 40px 5% 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ------------------------------------------- */
+/* 3. NAVIGATION (The "Spell Book" Spine) */
+/* ------------------------------------------- */
+header {
+    background-color: var(--color-mystical-aqua);
+    color: var(--color-text);
+    padding: 15px 5%;
+    position: fixed; /* Stays visible as they scroll */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav h1 {
+    font-size: 1.4em;
+    color: var(--color-text); 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--color-text);
+    padding: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--color-primary); /* Crab Red on hover */
+}
+
+/* ------------------------------------------- */
+/* 4. BUTTONS & CTAs (Call-to-Action) */
+/* ------------------------------------------- */
+.cta-button {
+    display: inline-block;
+    padding: 10px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    border: 2px solid var(--color-primary);
+}
+
+.primary {
+    background-color: var(--color-primary);
+    color: var(--color-pearl); /* White text on red */
+}
+
+.primary:hover {
+    background-color: var(--color-secondary); /* Gold on hover */
+    color: var(--color-text);
+    border-color: var(--color-secondary);
+}
+
+.secondary {
+    background-color: var(--color-pearl);
+    color: var(--color-primary);
+}
+
+.secondary:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+}
+
+/* ------------------------------------------- */
+/* 5. SERVICES PAGE CARD/TABLE STYLING */
+/* ------------------------------------------- */
+
+/* Styling for the service cards on the Home page overview */
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.service-cards .card {
+    background-color: var(--color-pearl);
+    padding: 20px;
+    border: 1px solid var(--color-mystical-aqua); /* Subtle border */
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.05); /* Soft, old-paper lift */
+    text-align: center;
+}
+
+/* Pricing Table Styling (For Services Page) */
+.pricing-table table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: var(--color-pearl);
+    border: 1px solid var(--color-mystical-aqua);
+}
+
+.pricing-table th, .pricing-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px dashed var(--color-mystical-aqua); /* Dotted line for spell book feel */
+}
+
+.pricing-table th {
+    background-color: var(--color-mystical-aqua);
+    color: var(--color-text);
+    font-weight: bold;
+}
+
+/* ------------------------------------------- */
+/* 6. FOOTER */
+/* ------------------------------------------- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--color-mystical-aqua);
+    color: var(--color-text);
+    font-size: 0.9em;
+}
