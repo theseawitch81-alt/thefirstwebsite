@@ -166,7 +166,25 @@ nav ul li a:hover {
 }
 
 .pricing-table th, .pricing-table td {
-    padding: 12px;
+    padding: 12px;.booking-intro {
+    text-align: center;
+    padding: 60px 20px 20px;
+    background-color: var(--color-background);
+}
+
+.widget-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 800px;
+}
+
+@media (max-width: 600px) {
+    .widget-container {
+        padding: 10px;
+    }
+}
+
     text-align: left;
     border-bottom: 1px dashed var(--color-mystical-aqua); /* Dotted line for spell book feel */
 }
