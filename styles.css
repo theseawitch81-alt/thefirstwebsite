@@ -247,3 +247,20 @@ footer {
     background-color: var(--color-mystical-aqua);
     transform: scale(1.05);
 }
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.social-links a {
+    color: var(--color-primary); /* Your main brand color */
+    font-size: 1.8rem;           /* Makes the icons a nice size */
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--color-mystical-aqua); /* Changes color when hovered */
+    transform: translateY(-5px);       /* Subtle lift effect */
+}
