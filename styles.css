@@ -264,3 +264,59 @@ footer {
     color: var(--color-mystical-aqua); /* Changes color when hovered */
     transform: translateY(-5px);       /* Subtle lift effect */
 }
+/* Ensure the main content starts below the header on mobile */
+main {
+    padding-top: 120px; /* Adjust this number until the 'Let's connect' text is fully visible */
+}
+
+@media (min-width: 768px) {
+    main {
+        padding-top: 80px; /* Less padding needed for desktop */
+    }
+}
+/* Base Navigation Styles */
+.main-nav {
+    display: flex;
+    flex-direction: column; /* Stacks logo over links on small screens */
+    align-items: center;
+    padding: 10px;
+    background-color: var(--color-background);
+    border-bottom: 1px solid var(--color-mystical-aqua);
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap; /* Allows links to go to a second line if they run out of space */
+    justify-content: center;
+    list-style: none;
+    gap: 10px;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.nav-links a {
+    font-size: 0.9rem; /* Slightly smaller text for mobile */
+    white-space: nowrap; /* Prevents words like 'Book Now' from breaking into two lines */
+}
+
+/* Desktop Adjustment: Back to a single line */
+@media (min-width: 768px) {
+    .main-nav {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 5%;
+    }
+    
+    .nav-links {
+        gap: 20px;
+    }
+    
+    .nav-links a {
+        font-size: 1.1rem;
+    }
+}
+.logo a {
+    color: var(--color-primary); /* Or your specific brand hex code */
+    text-decoration: none;
+}
